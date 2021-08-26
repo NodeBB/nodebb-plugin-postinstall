@@ -8,7 +8,7 @@ const winston = require.main.require('winston');
 
 const plugin = {};
 
-const supportedPackageManagerList = require.main.require('../cli/package-install').supportedPackageManager;
+const supportedPackageManagerList = require.main.require('./src/cli/package-install').supportedPackageManager;
 const packageManager = supportedPackageManagerList.indexOf(nconf.get('package_manager')) >= 0 ? nconf.get('package_manager') : 'npm';
 let packageManagerExecutable = packageManager;
 if (process.platform === 'win32') {

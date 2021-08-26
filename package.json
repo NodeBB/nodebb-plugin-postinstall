@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-postinstall",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A NodeBB plugin to run npm's postinstall on single package un/installations",
   "main": "library.js",
   "repository": {
