@@ -1,0 +1,49 @@
+{
+  "name": "nodebb-plugin-postinstall",
+  "version": "0.0.1",
+  "description": "A NodeBB plugin to run npm's postinstall on single package un/installations",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeBB/nodebb-plugin-postinstall"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "npm",
+    "postinstall"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "author": {
+    "name": "psychobunny",
+    "email": "psycho.bunny@hotmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeBB/nodebb-plugin-postinstall/issues"
+  },
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^1.15.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-angular": "13.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-nodebb": "0.0.2",
+    "eslint-plugin-import": "2.24.2",
+    "husky": "7.0.2",
+    "lint-staged": "11.1.2"
+  }
+}

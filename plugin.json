@@ -1,0 +1,9 @@
+{
+	"id": "nodebb-plugin-postinstall",
+	"url": "https://github.com/NodeBB/nodebb-plugin-postinstall",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "action:plugin.install", "method": "runPostinstall" },
+		{ "hook": "action:plugin.uninstall", "method": "runPostinstall" }
+	]
+}
